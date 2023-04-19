@@ -10,10 +10,43 @@
 </head>
 
 <body>
+
+
     <div class="clock">
-        <div class="hour"></div>
-        <div class="minutes"></div>
+        <div class="hour">00</div>
+        <div class="minutes">00</div>
+        <div class="seconds">00</div>
     </div>
+
+    <form id="form" class="input-minutes">
+        <label for="enter-minutes">Enter minutes</label>
+
+        <input type="text" inputmode="numeric" pattern="\d*" name="enter-number" id="enter-minutes" value="" required>
+
+        <button type="submit" class="btn-submit">Submit</button>
+    </form>
+
+    <div class="display">
+        <div class="alarm-icon">
+            <ion-icon name="alarm-outline"></ion-icon>
+        </div>
+
+        <p id="timeCountDown"></p>
+
+        <button id="btn-countdown-cancel" type="submit" class="fadeOut">Cancel</button>
+
+
+    </div>
+    <audio src="./audio/Thunder - Gabry Ponte, LUM!X, Prezioso.mp3" id="myAudio"></audio>
+
+
+
+
+
+
+    <script src="./javaScript.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
