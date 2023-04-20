@@ -11,7 +11,6 @@
 
 <body>
 
-
     <div class="clock">
         <div class="hour">00</div>
         <div class="minutes">00</div>
@@ -21,7 +20,23 @@
     <form id="form" class="input-minutes">
         <label for="enter-minutes">Enter minutes</label>
 
-        <input type="text" inputmode="numeric" pattern="\d*" name="enter-number" id="enter-minutes" value="" required>
+        <input type="text" inputmode="numeric" name="enter-number" id="enter-minutes" value="">
+
+
+        <select name="" id="selectTypes">
+            <option value="7200">2 Hours</option>
+            <option value="5400">1 Hour 30 Minutes</option>
+            <option value="3600">1 Hours</option>
+            <option value="2700"> 45 Minutes</option>
+            <option value="1800">30 Minutes</option>
+            <option value="900">15 Minutes</option>
+            <option value="300">5 Minutes</option>
+            <option value="60">1 Minutes</option>
+            <option value="30">30 Seconds</option>
+            <option value="10">10 Seconds</option>
+            <option value="default" selected>Chose one option to start</option>
+        </select>
+
 
         <button type="submit" class="btn-submit">Submit</button>
     </form>
@@ -34,10 +49,16 @@
         <p id="timeCountDown"></p>
 
         <button id="btn-countdown-cancel" type="submit" class="fadeOut">Cancel</button>
-
-
     </div>
+
+
     <audio src="./audio/Thunder - Gabry Ponte, LUM!X, Prezioso.mp3" id="myAudio"></audio>
+
+
+
+
+
+
 
 
 

@@ -53,17 +53,18 @@ body
 
 
 
-/*  Formmmmmmmmmmmm */
+/* ====================== Form ================== */
 body #form
 {
     position: absolute;
     top: 5rem;
-    width: 15rem;
-    height: 10rem;
-    
+    width: 25rem;
+    height: 15rem;
+    /* background-color: aqua; */
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     user-select: none;
 
@@ -71,6 +72,10 @@ body #form
 
 }
 
+body #form.active
+{
+    transform: translateY(-20rem);
+}
 
 .input-minutes #enter-minutes
 {   
@@ -91,9 +96,22 @@ body #form
     font-size: 1.8rem;
     top: -3rem;
 }
+#form #selectTypes
+{
+    width: 21rem;
+    height: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#form #selectTypes option[selected]
+{
+    display: none;
+}
+
 .input-minutes .btn-submit
 {   
-    margin: 1rem;
+    /* margin: 1rem; */
     cursor: pointer;
     padding: 1rem;
     border: none;
@@ -127,6 +145,39 @@ body #form
     transition: transform 2s linear;
     transform: translateX(-100rem);
 }
+
+
+.display.active
+{
+    transform: translateX(0);
+    opacity: 0; /* Đặt opacity ban đầu là 0 */
+  animation-name: slideAndFade; /* Tên của animation */
+  animation-duration: 3s; /* Thời gian thực hiện animation là 3s */
+  animation-timing-function: ease; /* Hàm đồng bộ của animation */
+  animation-fill-mode: forwards; /* Giữ lại giá trị thuộc tính của animation khi hoàn thành */
+}
+
+@keyframes slideAndFade {
+    0% {
+      opacity: 0; /* Không độ mờ */
+    }
+    100% {
+      opacity: 1; /* Độ mờ tăng dần lên 1 */
+    }
+  }
+.display.fadeOut
+{
+    opacity: 1;
+    animation:fadeOut 2s ease ;
+}
+@keyframes fadeOut {
+    0% {
+      opacity: 1; 
+    }
+    100% {
+      opacity: 0; 
+    }
+  }
 .display p
 {   
     position: relative;
@@ -191,3 +242,24 @@ body #form
     transition: transform 1.5s ease;
 }
 
+@media screen and (max-width: 767px) {
+    .clock
+{
+    width: 50rem;
+    height: 50rem;
+    font-size: 8rem;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    color: transparent;
+    background-image: linear-gradient(to right, rgb(0, 238, 255),rgb(155, 155, 17),rgb(255, 0, 0));
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: animateChangeColor 10s infinite alternate linear;
+    user-select: none;
+}
+}
