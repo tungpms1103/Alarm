@@ -262,4 +262,21 @@ body #form.active
     animation: animateChangeColor 10s infinite alternate linear;
     user-select: none;
 }
+
+.display p
+{   
+  
+    font-size: 2rem;
+  
+}
+.display p span
+{
+    font-size: 1.8rem;
+}
+
+.display .alarm-icon
+{   margin-top: 1.2rem;
+    font-size: 2.4rem;
+    
+}
 }
